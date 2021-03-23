@@ -10,7 +10,7 @@ import UIKit
 import IRCommonLib
 
 class IRReadingRecordManager: NSObject {
-
+    
     static let directoryPath = "/ReadingRecord"
     
     class func readingRecord(with bookName: String) -> IRReadingRecordModel {

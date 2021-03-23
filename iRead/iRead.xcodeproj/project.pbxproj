@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A84473187B0EA7A476C1969 /* libPods-iRead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B87A9CDFDD42A9D2DA19857 /* libPods-iRead.a */; };
 		810452C725EA974300C0230A /* IRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810452C625EA974300C0230A /* IRNetworkManager.swift */; };
 		811BEE7125CC4DF600F672B8 /* IRWifiUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BEE7025CC4DF600F672B8 /* IRWifiUploadViewController.swift */; };
 		8126CF6D2545888500C71415 /* IRChapterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8126CF6C2545888500C71415 /* IRChapterListViewController.swift */; };
@@ -29,8 +30,6 @@
 		816DFBB12404D39B0030E55B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DFBB02404D39B0030E55B /* AppDelegate.swift */; };
 		816DFBBA2404D3A00030E55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816DFBB92404D3A00030E55B /* Assets.xcassets */; };
 		816DFBBD2404D3A00030E55B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816DFBBB2404D3A00030E55B /* LaunchScreen.storyboard */; };
-		816DFBC82404D3A00030E55B /* iReadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DFBC72404D3A00030E55B /* iReadTests.swift */; };
-		816DFBD32404D3A00030E55B /* iReadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DFBD22404D3A00030E55B /* iReadUITests.swift */; };
 		816DFBE52404D8010030E55B /* IRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816DFBE42404D8010030E55B /* IRNavigationController.swift */; };
 		817A2C262480BBC4007C5EF7 /* libIRCommonLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 817A2C252480BBC4007C5EF7 /* libIRCommonLib.a */; };
 		818040A12521951400F31442 /* IRReaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818040A02521951400F31442 /* IRReaderConfig.swift */; };
@@ -63,30 +62,10 @@
 		81C97760253DB83800E9CCCB /* IRFontSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C9775F253DB83800E9CCCB /* IRFontSelectView.swift */; };
 		81C97765253DB86300E9CCCB /* IRFontSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C97764253DB86300E9CCCB /* IRFontSelectCell.swift */; };
 		81CB116A254EECB70084E991 /* IRChapterTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB1169254EECB70084E991 /* IRChapterTipView.swift */; };
-		DB303FBF06BE075570EFDA68 /* libPods-iRead.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA102CBABD9ED364C525C64 /* libPods-iRead.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		816DFBC42404D3A00030E55B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 816DFBA52404D39B0030E55B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 816DFBAC2404D39B0030E55B;
-			remoteInfo = iRead;
-		};
-		816DFBCF2404D3A00030E55B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 816DFBA52404D39B0030E55B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 816DFBAC2404D39B0030E55B;
-			remoteInfo = iRead;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00DD04FE011F463B67348768 /* Pods-iRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.release.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.release.xcconfig"; sourceTree = "<group>"; };
-		3DA102CBABD9ED364C525C64 /* libPods-iRead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iRead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74B7166AED0711D73236BE22 /* Pods-iRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.debug.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.debug.xcconfig"; sourceTree = "<group>"; };
+		7B87A9CDFDD42A9D2DA19857 /* libPods-iRead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iRead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		810452C625EA974300C0230A /* IRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRNetworkManager.swift; sourceTree = "<group>"; };
 		811BEE7025CC4DF600F672B8 /* IRWifiUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRWifiUploadViewController.swift; sourceTree = "<group>"; };
 		8126CF6C2545888500C71415 /* IRChapterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRChapterListViewController.swift; sourceTree = "<group>"; };
@@ -112,12 +91,6 @@
 		816DFBB92404D3A00030E55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		816DFBBC2404D3A00030E55B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		816DFBBE2404D3A00030E55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816DFBC32404D3A00030E55B /* iReadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		816DFBC72404D3A00030E55B /* iReadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iReadTests.swift; sourceTree = "<group>"; };
-		816DFBC92404D3A00030E55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		816DFBCE2404D3A00030E55B /* iReadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		816DFBD22404D3A00030E55B /* iReadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iReadUITests.swift; sourceTree = "<group>"; };
-		816DFBD42404D3A00030E55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		816DFBE42404D8010030E55B /* IRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRNavigationController.swift; sourceTree = "<group>"; };
 		817A2C252480BBC4007C5EF7 /* libIRCommonLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIRCommonLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		818040A02521951400F31442 /* IRReaderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRReaderConfig.swift; sourceTree = "<group>"; };
@@ -150,6 +123,8 @@
 		81C9775F253DB83800E9CCCB /* IRFontSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRFontSelectView.swift; sourceTree = "<group>"; };
 		81C97764253DB86300E9CCCB /* IRFontSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRFontSelectCell.swift; sourceTree = "<group>"; };
 		81CB1169254EECB70084E991 /* IRChapterTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRChapterTipView.swift; sourceTree = "<group>"; };
+		956AB50221708917167F850C /* Pods-iRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.release.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.release.xcconfig"; sourceTree = "<group>"; };
+		B25B42CB4DF9703E913E8732 /* Pods-iRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.debug.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,22 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB303FBF06BE075570EFDA68 /* libPods-iRead.a in Frameworks */,
 				817A2C262480BBC4007C5EF7 /* libIRCommonLib.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816DFBC02404D3A00030E55B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816DFBCB2404D3A00030E55B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1A84473187B0EA7A476C1969 /* libPods-iRead.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				817A2C252480BBC4007C5EF7 /* libIRCommonLib.a */,
-				3DA102CBABD9ED364C525C64 /* libPods-iRead.a */,
+				7B87A9CDFDD42A9D2DA19857 /* libPods-iRead.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,8 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				816DFBAF2404D39B0030E55B /* iRead */,
-				816DFBC62404D3A00030E55B /* iReadTests */,
-				816DFBD12404D3A00030E55B /* iReadUITests */,
 				816DFBAE2404D39B0030E55B /* Products */,
 				CEADD0ABB21439E30F462373 /* Pods */,
 				06D5AC9458F154A3C7E935A0 /* Frameworks */,
@@ -291,8 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				816DFBAD2404D39B0030E55B /* iRead.app */,
-				816DFBC32404D3A00030E55B /* iReadTests.xctest */,
-				816DFBCE2404D3A00030E55B /* iReadUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -308,24 +265,6 @@
 				816DFBBE2404D3A00030E55B /* Info.plist */,
 			);
 			path = iRead;
-			sourceTree = "<group>";
-		};
-		816DFBC62404D3A00030E55B /* iReadTests */ = {
-			isa = PBXGroup;
-			children = (
-				816DFBC72404D3A00030E55B /* iReadTests.swift */,
-				816DFBC92404D3A00030E55B /* Info.plist */,
-			);
-			path = iReadTests;
-			sourceTree = "<group>";
-		};
-		816DFBD12404D3A00030E55B /* iReadUITests */ = {
-			isa = PBXGroup;
-			children = (
-				816DFBD22404D3A00030E55B /* iReadUITests.swift */,
-				816DFBD42404D3A00030E55B /* Info.plist */,
-			);
-			path = iReadUITests;
 			sourceTree = "<group>";
 		};
 		816DFBE02404D71C0030E55B /* App */ = {
@@ -509,8 +448,8 @@
 		CEADD0ABB21439E30F462373 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				74B7166AED0711D73236BE22 /* Pods-iRead.debug.xcconfig */,
-				00DD04FE011F463B67348768 /* Pods-iRead.release.xcconfig */,
+				B25B42CB4DF9703E913E8732 /* Pods-iRead.debug.xcconfig */,
+				956AB50221708917167F850C /* Pods-iRead.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -522,11 +461,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 816DFBD72404D3A00030E55B /* Build configuration list for PBXNativeTarget "iRead" */;
 			buildPhases = (
-				2C74BB94842E375F2792517B /* [CP] Check Pods Manifest.lock */,
+				A7992954E12C642AADF1612E /* [CP] Check Pods Manifest.lock */,
 				816DFBA92404D39B0030E55B /* Sources */,
 				816DFBAA2404D39B0030E55B /* Frameworks */,
 				816DFBAB2404D39B0030E55B /* Resources */,
-				EF9563783D4EAD0D4D6B0845 /* [CP] Copy Pods Resources */,
+				43C4397D0E5B3A6E08B1F08D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,42 +476,6 @@
 			productReference = 816DFBAD2404D39B0030E55B /* iRead.app */;
 			productType = "com.apple.product-type.application";
 		};
-		816DFBC22404D3A00030E55B /* iReadTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 816DFBDA2404D3A00030E55B /* Build configuration list for PBXNativeTarget "iReadTests" */;
-			buildPhases = (
-				816DFBBF2404D3A00030E55B /* Sources */,
-				816DFBC02404D3A00030E55B /* Frameworks */,
-				816DFBC12404D3A00030E55B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				816DFBC52404D3A00030E55B /* PBXTargetDependency */,
-			);
-			name = iReadTests;
-			productName = iReadTests;
-			productReference = 816DFBC32404D3A00030E55B /* iReadTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		816DFBCD2404D3A00030E55B /* iReadUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 816DFBDD2404D3A00030E55B /* Build configuration list for PBXNativeTarget "iReadUITests" */;
-			buildPhases = (
-				816DFBCA2404D3A00030E55B /* Sources */,
-				816DFBCB2404D3A00030E55B /* Frameworks */,
-				816DFBCC2404D3A00030E55B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				816DFBD02404D3A00030E55B /* PBXTargetDependency */,
-			);
-			name = iReadUITests;
-			productName = iReadUITests;
-			productReference = 816DFBCE2404D3A00030E55B /* iReadUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -580,25 +483,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = zzyong;
 				TargetAttributes = {
 					816DFBAC2404D39B0030E55B = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1140;
 					};
-					816DFBC22404D3A00030E55B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 816DFBAC2404D39B0030E55B;
-					};
-					816DFBCD2404D3A00030E55B = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 816DFBAC2404D39B0030E55B;
-					};
 				};
 			};
 			buildConfigurationList = 816DFBA82404D39B0030E55B /* Build configuration list for PBXProject "iRead" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -611,8 +506,6 @@
 			projectRoot = "";
 			targets = (
 				816DFBAC2404D39B0030E55B /* iRead */,
-				816DFBC22404D3A00030E55B /* iReadTests */,
-				816DFBCD2404D3A00030E55B /* iReadUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -627,24 +520,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		816DFBC12404D3A00030E55B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816DFBCC2404D3A00030E55B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C74BB94842E375F2792517B /* [CP] Check Pods Manifest.lock */ = {
+		43C4397D0E5B3A6E08B1F08D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7992954E12C642AADF1612E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -664,23 +560,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF9563783D4EAD0D4D6B0845 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iRead/Pods-iRead-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -744,36 +623,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		816DFBBF2404D3A00030E55B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816DFBC82404D3A00030E55B /* iReadTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		816DFBCA2404D3A00030E55B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				816DFBD32404D3A00030E55B /* iReadUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		816DFBC52404D3A00030E55B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 816DFBAC2404D39B0030E55B /* iRead */;
-			targetProxy = 816DFBC42404D3A00030E55B /* PBXContainerItemProxy */;
-		};
-		816DFBD02404D3A00030E55B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 816DFBAC2404D39B0030E55B /* iRead */;
-			targetProxy = 816DFBCF2404D3A00030E55B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		816DFBBB2404D3A00030E55B /* LaunchScreen.storyboard */ = {
@@ -813,6 +663,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -837,7 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -873,6 +724,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -891,7 +743,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -903,7 +755,7 @@
 		};
 		816DFBD82404D3A00030E55B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74B7166AED0711D73236BE22 /* Pods-iRead.debug.xcconfig */;
+			baseConfigurationReference = B25B42CB4DF9703E913E8732 /* Pods-iRead.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -912,7 +764,7 @@
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = 5F24R2G835;
 				INFOPLIST_FILE = iRead/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_GENERATE_MAP_FILE = YES;
 				LD_MAP_FILE_PATH = "$(SRCROOT)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -932,7 +784,7 @@
 		};
 		816DFBD92404D3A00030E55B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00DD04FE011F463B67348768 /* Pods-iRead.release.xcconfig */;
+			baseConfigurationReference = 956AB50221708917167F850C /* Pods-iRead.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -942,7 +794,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 5F24R2G835;
 				INFOPLIST_FILE = iRead/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_MAP_FILE_PATH = "$(SRCROOT)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -955,90 +807,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/**";
-			};
-			name = Release;
-		};
-		816DFBDB2404D3A00030E55B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F24R2G835;
-				INFOPLIST_FILE = iReadTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iReadTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRead.app/iRead";
-			};
-			name = Debug;
-		};
-		816DFBDC2404D3A00030E55B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F24R2G835;
-				INFOPLIST_FILE = iReadTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iReadTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iRead.app/iRead";
-			};
-			name = Release;
-		};
-		816DFBDE2404D3A00030E55B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F24R2G835;
-				INFOPLIST_FILE = iReadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iReadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iRead;
-			};
-			name = Debug;
-		};
-		816DFBDF2404D3A00030E55B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5F24R2G835;
-				INFOPLIST_FILE = iReadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iReadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iRead;
 			};
 			name = Release;
 		};
@@ -1059,24 +827,6 @@
 			buildConfigurations = (
 				816DFBD82404D3A00030E55B /* Debug */,
 				816DFBD92404D3A00030E55B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		816DFBDA2404D3A00030E55B /* Build configuration list for PBXNativeTarget "iReadTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				816DFBDB2404D3A00030E55B /* Debug */,
-				816DFBDC2404D3A00030E55B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		816DFBDD2404D3A00030E55B /* Build configuration list for PBXNativeTarget "iReadUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				816DFBDE2404D3A00030E55B /* Debug */,
-				816DFBDF2404D3A00030E55B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

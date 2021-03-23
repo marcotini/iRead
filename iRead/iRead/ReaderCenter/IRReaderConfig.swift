@@ -37,13 +37,13 @@ public enum IRReadZHFontName: String {
     
     func displayName() -> String {
         if self.rawValue == IRReadZHFontName.STSong.rawValue {
-            return "宋体"
+            return "Times New Roman"
         } else if self.rawValue == IRReadZHFontName.STKaitiSC.rawValue {
-            return "楷体"
+            return "Italics"
         } else if self.rawValue == IRReadZHFontName.STYuanti.rawValue {
-            return "圆体"
+            return "Round body"
         } else {
-            return "苹方"
+            return "Ping Fang"
         }
     }
 }
@@ -191,7 +191,7 @@ class IRReaderConfig: NSObject {
     //MARK: - UI Color Theme
     static var separatorColor: UIColor!
     static var bgColor: UIColor!
- 
+    
     static func updateReadColorConfig(pageColorHex: String) {
         
         if pageColorHex == IRReadPageColorHex.HexF8F8F8.rawValue {

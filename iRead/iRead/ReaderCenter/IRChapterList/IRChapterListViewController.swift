@@ -17,9 +17,9 @@ protocol IRChapterListViewControllerDelagate: AnyObject {
 
 enum IRSegmentType: String {
     /// 目录
-    case chapter = "目录"
+    case chapter = "Table of contents"
     /// 书签
-    case bookmark = "书签"
+    case bookmark = "Bookmarks"
 }
 
 class IRChapterListViewController: IRBaseViewcontroller{
@@ -30,12 +30,12 @@ class IRChapterListViewController: IRBaseViewcontroller{
     var chapterListView: UICollectionView?
     var bookmarkListListView: UITableView?
     var emptyView: IREmptyView?
-     
+    
     var segmentType = IRSegmentType.chapter
     var currentChapterIdx: Int?
     lazy var chapterList = [FRTocReference]()
     lazy var bookmarkList = [IRBookmarkModel]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(contentView)
@@ -75,7 +75,7 @@ class IRChapterListViewController: IRBaseViewcontroller{
         if (segmentType == .bookmark && bookmarkList.count == 0) {
             if emptyView == nil {
                 emptyView = IREmptyView.init(frame: self.view.bounds)
-                emptyView?.setTitle("暂无书签", subTitle: "呼出阅读菜单，轻点“书签”按钮添加书签～")
+                emptyView?.setTitle("No bookmarks", subTitle: "Call up the reading menu, tap the bookmark button to add a bookmark~")
                 emptyView?.state = .empty
                 self.view.addSubview(emptyView!)
             }
@@ -151,7 +151,7 @@ extension IRChapterListViewController: UICollectionViewDelegateFlowLayout, UICol
         }
         return chapterCell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: collectionView.width, height: 50)
     }
@@ -189,7 +189,7 @@ extension IRChapterListViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
-        return "删除"
+        return "Delete"
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

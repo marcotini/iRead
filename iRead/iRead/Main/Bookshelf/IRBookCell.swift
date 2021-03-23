@@ -115,12 +115,12 @@ class IRBookCell: UICollectionViewCell {
         var textAlignment: NSTextAlignment?
         if let progress = bookModel?.progress {
             if progress <= 0 {
-                progressLabel.text = "新增"
+                progressLabel.text = "Add"
                 bgColor = UIColor.rgba(255, 156, 0, 1)
                 textAlignment = .center
                 textColor = .white
             } else if progress >= 100 {
-                progressLabel.text = "已读完"
+                progressLabel.text = "Finished"
             } else {
                 progressLabel.text = "\(progress)%"
             }

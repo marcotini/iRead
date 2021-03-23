@@ -70,7 +70,7 @@ class IRReadSettingView: UIView, IRSwitchSettingViewDeleagte, IRReadColorSetting
             make.size.equalTo(IRReadSettingView.viewSize)
         }
         
-        scrollSettingView.titleLabel.text = "竖向翻页"
+        scrollSettingView.titleLabel.text = "Turn pages vertically"
         scrollSettingView.isOn = IRReaderConfig.transitionStyle == .scroll
         scrollSettingView.delegate = self
         contentView.addSubview(scrollSettingView)

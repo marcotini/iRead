@@ -16,9 +16,9 @@ enum IRTabBarIndex: Int {
 }
 
 enum IRTabBarName: String {
-    case home      = "首页"
-    case bookshelf = "书架"
-    case explore   = "探索"
+    case home      = "Home"
+    case bookshelf = "Bookshelf"
+    case explore   = "Explore"
 }
 
 class IRMainViewController: UITabBarController, UITabBarControllerDelegate {

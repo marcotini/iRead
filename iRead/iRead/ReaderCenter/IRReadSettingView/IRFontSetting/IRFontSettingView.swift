@@ -58,7 +58,7 @@ class IRFontSettingView: UIView, IRArrowSettingViewDelegate {
     
     func setupSubviews() {
         
-        fontTypeSelectView.titleLabel.text = "字体"
+        fontTypeSelectView.titleLabel.text = "Font"
         fontTypeSelectView.detailText = IRReaderConfig.fontDispalyName
         fontTypeSelectView.delegate = self
         self.addSubview(fontTypeSelectView)
@@ -85,7 +85,7 @@ class IRFontSettingView: UIView, IRArrowSettingViewDelegate {
             make.bottom.equalTo(fontTypeSelectView.snp.top)
             make.left.equalTo(self.snp.centerX)
         }
-    
+        
         self.addSubview(midLine)
         midLine.snp.makeConstraints { (make) -> Void in
             make.centerX.equalTo(self)

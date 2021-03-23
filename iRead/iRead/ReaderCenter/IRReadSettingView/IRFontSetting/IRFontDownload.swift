@@ -52,37 +52,37 @@ class IRFontDownload: NSObject {
             
             let progressValue = (progressParamater as Dictionary)[kCTFontDescriptorMatchingPercentage]?.doubleValue
             switch state {
-                case .didBegin: do {
+            case .didBegin: do {
+                OperationQueue.main.addOperation {
+                    self.delegate?.fontDownloadDidBegin(self)
+                }
+            }
+            
+            case .didFinish: do {
+                OperationQueue.main.addOperation {
+                    self.delegate?.fontDownloadDidFinish(self)
+                }
+            }
+            
+            case .downloading: do {
+                OperationQueue.main.addOperation {
+                    self.delegate?.fontDownloadDownloading(self, progress: progressValue ?? 0)
+                }
+            }
+            
+            case .didFailWithError: do {
+                if let error = (progressParamater as Dictionary)[kCTFontDescriptorMatchingError] as? NSError {
                     OperationQueue.main.addOperation {
-                        self.delegate?.fontDownloadDidBegin(self)
+                        self.delegate?.fontDownloadDidFail(self, error: error)
                     }
+                } else {
+                    print("ERROR MESSAGE IS NOT AVAILABLE")
                 }
-
-                case .didFinish: do {
-                    OperationQueue.main.addOperation {
-                        self.delegate?.fontDownloadDidFinish(self)
-                    }
-                }
-
-                case .downloading: do {
-                    OperationQueue.main.addOperation {
-                        self.delegate?.fontDownloadDownloading(self, progress: progressValue ?? 0)
-                    }
-                }
-                    
-                case .didFailWithError: do {
-                    if let error = (progressParamater as Dictionary)[kCTFontDescriptorMatchingError] as? NSError {
-                        OperationQueue.main.addOperation {
-                            self.delegate?.fontDownloadDidFail(self, error: error)
-                        }
-                    } else {
-                        print("ERROR MESSAGE IS NOT AVAILABLE")
-                    }
-                }
-                    
-                default: do {
-                    IRDebugLog(String(reflecting: state))
-                }
+            }
+            
+            default: do {
+                IRDebugLog(String(reflecting: state))
+            }
             }
             
             if self.stop {

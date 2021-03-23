@@ -20,7 +20,7 @@ protocol IRBookParseDelegate: AnyObject {
 }
 
 class IRBook: NSObject {
-
+    
     weak var parseDelegate: IRBookParseDelegate?
     private var bookMeta: FRBook
     var bookPath: String?
@@ -68,10 +68,10 @@ class IRBook: NSObject {
     
     var bookName: String {
         get {
-#if DEBUG
+            #if DEBUG
             assert(bookMeta.title != nil, "Book name is nil")
-#endif
-            return bookMeta.title ?? "无书名"
+            #endif
+            return bookMeta.title ?? "No title"
         }
     }
     
@@ -90,11 +90,11 @@ class IRBook: NSObject {
         self.init(withBookMeta: bookMeta)
     }
     
-#if DEBUG
+    #if DEBUG
     deinit {
         IRDebugLog("")
     }
-#endif
+    #endif
     
     func findChapterIndexByTocReference(_ reference: FRTocReference) -> Int {
         var chapterIndex = 0
@@ -149,8 +149,8 @@ extension IRBook {
         var tempBookmarkList = [IRBookmarkModel]()
         for item in bookmarkList {
             if  bookmark.chapterIdx == item.chapterIdx &&
-                item.textLoction >= textRange.location &&
-                item.textLoction <  textRange.location + textRange.length {
+                    item.textLoction >= textRange.location &&
+                    item.textLoction <  textRange.location + textRange.length {
                 continue
             }
             tempBookmarkList.append(item)

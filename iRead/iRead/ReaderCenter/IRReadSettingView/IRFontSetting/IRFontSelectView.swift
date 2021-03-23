@@ -72,7 +72,7 @@ class IRFontSelectView: UIView, UICollectionViewDataSource, UICollectionViewDele
             make.left.equalTo(self).offset(5)
         }
         
-        titleLabel.text = "字体"
+        titleLabel.text = "Font"
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         self.addSubview(titleLabel)

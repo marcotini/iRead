@@ -46,7 +46,7 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
     
     func commonInit() {
         view.backgroundColor = .white
-        title = "WiFi-传书"
+        title = "WiFi-Pass the book"
         
         view.addSubview(titleLabel)
         let top = (navigationController?.navigationBar.frame.maxY ?? 0) + 30
@@ -86,15 +86,15 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
         titleStyle.alignment = .center
         titleStyle.lineSpacing = 15
         let font = UIFont.systemFont(ofSize: 16)
-        let titleText = NSMutableAttributedString.init(string: "HTTP服务器启动失败", attributes: [.font: font, .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
+        let titleText = NSMutableAttributedString.init(string: "HTTP server failed to start", attributes: [.font: font, .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
         titleLabel.attributedText = titleText
         
         let warningStyle = NSMutableParagraphStyle()
         warningStyle.alignment = .center
         warningStyle.lineSpacing = 5
         let warningColor = UIColor.hexColor("999999")
-        let warning = NSMutableAttributedString.init(string: "Wi-Fi服务未连接\n", attributes: [.font: font, .foregroundColor: warningColor, .paragraphStyle: warningStyle])
-        let unlink = NSAttributedString.init(string: "请确认您的设备的连接状态", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
+        let warning = NSMutableAttributedString.init(string: "Wi-Fi service is not connected\n", attributes: [.font: font, .foregroundColor: warningColor, .paragraphStyle: warningStyle])
+        let unlink = NSAttributedString.init(string: "Please confirm the connection status of your device", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
         warning.append(unlink)
         warningLabel.attributedText = warning
     }
@@ -108,7 +108,7 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
         titleStyle.alignment = .center
         titleStyle.lineSpacing = 15
         let font = UIFont.systemFont(ofSize: 16)
-        let titleText = NSMutableAttributedString.init(string: "在电脑浏览器地址栏输入\n", attributes: [.font: font, .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
+        let titleText = NSMutableAttributedString.init(string: "Type in the address bar of the computer browser\n", attributes: [.font: font, .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
         let descText = NSAttributedString.init(string: serverURLString, attributes: [.font: font, .foregroundColor: UIColor.systemBlue, .paragraphStyle: titleStyle])
         titleText.append(descText)
         titleLabel.attributedText = titleText
@@ -117,9 +117,9 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
         warningStyle.alignment = .center
         warningStyle.lineSpacing = 5
         let warningColor = UIColor.hexColor("999999")
-        let warning = NSMutableAttributedString.init(string: "Wi-Fi模式已开启\n", attributes: [.font: font, .foregroundColor: warningColor, .paragraphStyle: warningStyle])
-        let link = NSAttributedString.init(string: "已连接Wi-Fi\n", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
-        let sameWifi = NSAttributedString.init(string: "手机与电脑必须在同一Wi-Fi中", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
+        let warning = NSMutableAttributedString.init(string: "Wi-Fi mode is on\n", attributes: [.font: font, .foregroundColor: warningColor, .paragraphStyle: warningStyle])
+        let link = NSAttributedString.init(string: "Wi-Fi connected\n", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
+        let sameWifi = NSAttributedString.init(string: "Mobile phone and computer must be in the same Wi-Fi", attributes: [.font:  UIFont.systemFont(ofSize: 13), .foregroundColor: warningColor, .paragraphStyle: warningStyle])
         warning.append(link)
         warning.append(sameWifi)
         warningLabel.attributedText = warning
@@ -129,8 +129,8 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
         let titleStyle = NSMutableParagraphStyle()
         titleStyle.alignment = .center
         titleStyle.lineSpacing = 15
-        let titleText = NSMutableAttributedString.init(string: "已连接请传输\n", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
-        let descText = NSAttributedString.init(string: "传输过程中不要关闭此界面或锁屏", attributes: [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.red, .paragraphStyle: titleStyle])
+        let titleText = NSMutableAttributedString.init(string: "Connected please transfer\n", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.lightGray, .paragraphStyle: titleStyle])
+        let descText = NSAttributedString.init(string: "Do not close this interface or lock the screen during transmission", attributes: [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.red, .paragraphStyle: titleStyle])
         titleText.append(descText)
         titleLabel.attributedText = titleText
         
@@ -139,12 +139,12 @@ class IRWifiUploadViewController: IRBaseViewcontroller, GCDWebUploaderDelegate {
     
     func webUploader(_ uploader: GCDWebUploader, didUploadFileAtPath path: String) {
         HUD.dimsBackground = false
-        HUD.flash(.labeledSuccess(title: "上传成功", subtitle: path.lastPathComponent), delay: 1)
+        HUD.flash(.labeledSuccess(title: "Uploaded successfully", subtitle: path.lastPathComponent), delay: 1)
         IRFileManager.shared.addEpubBookByWifiUploadBookPath(path)
     }
     
     func webUploader(_ uploader: GCDWebUploader, didDeleteItemAtPath path: String) {
         HUD.dimsBackground = false
-        HUD.flash(.labeledSuccess(title: "删除成功", subtitle: path.lastPathComponent), delay: 1)
+        HUD.flash(.labeledSuccess(title: "Successfully deleted", subtitle: path.lastPathComponent), delay: 1)
     }
 }

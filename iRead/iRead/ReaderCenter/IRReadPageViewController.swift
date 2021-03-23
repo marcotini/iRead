@@ -10,7 +10,7 @@ import UIKit
 import DTCoreText
 
 class IRReadPageViewController: UIViewController {
-
+    
     private var pageSize = CGSize.zero
     var pageLabel: UILabel = {
         let label = UILabel()
@@ -24,7 +24,7 @@ class IRReadPageViewController: UIViewController {
         label.backgroundColor = UIColor.clear
         return label
     }()
-
+    
     var pageModel: IRBookPage? {
         willSet {
             self.contentLabel.attributedString = newValue?.content

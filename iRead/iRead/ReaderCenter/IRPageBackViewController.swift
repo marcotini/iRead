@@ -9,7 +9,7 @@
 import UIKit
 
 class IRPageBackViewController: UIViewController {
-
+    
     var contentView: UIView?
     
     override func viewDidLayoutSubviews() {
@@ -20,7 +20,7 @@ class IRPageBackViewController: UIViewController {
     class func pageBackViewController(WithPageView content: UIView?) -> IRPageBackViewController {
         
         let backVc = IRPageBackViewController()
-
+        
         guard let snap = content?.snapshotView(afterScreenUpdates: true) else {
             return backVc
         }

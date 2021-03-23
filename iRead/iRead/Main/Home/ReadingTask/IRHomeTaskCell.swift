@@ -57,8 +57,8 @@ class IRHomeTaskCell: UICollectionViewCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         paragraphStyle.lineSpacing = 5
-        let titleText = NSMutableAttributedString.init(string: "每日阅读", attributes: [.font: UIFont.boldSystemFont(ofSize: 22), .foregroundColor: UIColor.black, .paragraphStyle: paragraphStyle])
-        let descText = NSAttributedString.init(string: "\n每天阅读1小时，积少成多，聚沙成塔~", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.hexColor("999999"), .paragraphStyle: paragraphStyle])
+        let titleText = NSMutableAttributedString.init(string: "Daily reading", attributes: [.font: UIFont.boldSystemFont(ofSize: 22), .foregroundColor: UIColor.black, .paragraphStyle: paragraphStyle])
+        let descText = NSAttributedString.init(string: "\nRead for 1 hour a day, and accumulate less into more, gather sand into a tower~", attributes: [.font: UIFont.systemFont(ofSize: 16), .foregroundColor: UIColor.hexColor("999999"), .paragraphStyle: paragraphStyle])
         titleText.append(descText)
         return titleText
     }()
@@ -110,7 +110,7 @@ class IRHomeTaskCell: UICollectionViewCell {
         timeDescLabel.textColor = .black
         timeDescLabel.textAlignment = .center
         timeDescLabel.font = .boldSystemFont(ofSize: 16)
-        timeDescLabel.text = "今日阅读进度"
+        timeDescLabel.text = "Today's reading progress"
         contentView.addSubview(timeDescLabel)
         timeDescLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(taskProgress)

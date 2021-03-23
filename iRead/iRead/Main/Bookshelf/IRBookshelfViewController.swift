@@ -131,7 +131,7 @@ class IRBookshelfViewController: IRBaseViewcontroller, IRReaderCenterDelegate {
         if (bookList.count == 0) {
             if emptyView == nil {
                 emptyView = IREmptyView.init(frame: self.view.bounds)
-                emptyView?.setTitle("空空如也", subTitle: "快用好书塞满书架吧～")
+                emptyView?.setTitle("Empty", subTitle: "Hurry up and fill up the bookshelf with good books~")
                 self.view.addSubview(emptyView!)
             }
             emptyView?.state = state
@@ -154,7 +154,7 @@ extension IRBookshelfViewController: IRBookCellDelegate {
         epubItem.title = bookModel.bookName
         epubItem.icon = bookModel.coverImage
         
-        let delete = IRActivity.init(withTitle: "删除", type: UIActivity.ActivityType.delete)
+        let delete = IRActivity.init(withTitle: "Delete", type: UIActivity.ActivityType.delete)
         delete.image = UIImage.init(named: "trash")
         
         let activityVC = UIActivityViewController.init(activityItems: [epubItem], applicationActivities: [delete])
@@ -191,10 +191,10 @@ extension IRBookshelfViewController: IRBookCellDelegate {
     func showDeleteAlert(with bookPath: String, at index: IndexPath?) {
         let alertVC = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         alertVC.view.tintColor = .black
-        let delete = UIAlertAction.init(title: "删除", style: .destructive) { (action) in
+        let delete = UIAlertAction.init(title: "Delete", style: .destructive) { (action) in
             self.deleteBook(at: index, bookPath: bookPath)
         }
-        let cancle = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+        let cancle = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
         alertVC.addAction(delete)
         alertVC.addAction(cancle)
         self.present(alertVC, animated: true, completion: nil)
@@ -237,6 +237,7 @@ extension IRBookshelfViewController: UICollectionViewDelegateFlowLayout, UIColle
 extension IRBookshelfViewController {
     func testBooks() -> [IRBookModel] {
         var bookList = [IRBookModel]()
+        /*
         if let book = testBook(name: "细说明朝") {
             bookList.append(book)
         }
@@ -246,12 +247,14 @@ extension IRBookshelfViewController {
         if let book = testBook(name: "Гарри Поттер") {
             bookList.append(book)
         }
+         if let book = testBook(name: "Крушение империи") {
+             bookList.append(book)
+         }
+ */
         if let book = testBook(name: "The Silver Chair") {
             bookList.append(book)
         }
-        if let book = testBook(name: "Крушение империи") {
-            bookList.append(book)
-        }
+        
         return bookList
     }
     

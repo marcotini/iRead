@@ -54,7 +54,7 @@ class IRChapterTipView: UIView {
     
     func update(title: String?, pageIndex: Int) {
         titleLabel.text = title
-        pageIdxLabel.text = "第\(pageIndex)页"
+        pageIdxLabel.text = "First\(pageIndex)page"
     }
     
     func updateThemeColor() {

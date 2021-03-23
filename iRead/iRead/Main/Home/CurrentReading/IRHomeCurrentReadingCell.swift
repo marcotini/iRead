@@ -56,18 +56,18 @@ class IRHomeCurrentReadingCell: UICollectionViewCell {
                 addBookContentViewIfNeeded()
                 emptyLabel?.isHidden = true
                 bookContentView?.isHidden = false
-                readingBtn.setTitle("继续阅读", for: .normal)
+                readingBtn.setTitle("Continue reading", for: .normal)
                 
                 bookCover?.image = readingModel?.coverImage
                 bookNameLabel?.text = readingModel?.bookName
-                authorLabel?.text = readingModel?.author ?? "佚名"
+                authorLabel?.text = readingModel?.author ?? "Anonymous"
                 
                 updateProgressLabelText()
             } else {
                 addEmptyLabelIfNeeded()
                 bookContentView?.isHidden = true
                 emptyLabel?.isHidden = false
-                readingBtn.setTitle("添加图书", for: .normal)
+                readingBtn.setTitle("Add book", for: .normal)
             }
         }
     }
@@ -78,12 +78,12 @@ class IRHomeCurrentReadingCell: UICollectionViewCell {
         var textAlignment: NSTextAlignment?
         if let progress = readingModel?.progress {
             if progress <= 0 {
-                progressLabel!.text = "新增"
+                progressLabel!.text = "Add"
                 bgColor = UIColor.rgba(255, 156, 0, 1)
                 textAlignment = .center
                 textColor = .white
             } else if progress >= 100 {
-                progressLabel!.text = "已读完"
+                progressLabel!.text = "Finished"
             } else {
                 progressLabel!.text = "\(progress)%"
             }
@@ -104,7 +104,7 @@ class IRHomeCurrentReadingCell: UICollectionViewCell {
         emptyLabel.numberOfLines = 0
         emptyLabel.font = .systemFont(ofSize: 16)
         emptyLabel.textColor = .hexColor("666666")
-        emptyLabel.text = "亲，你暂无正在阅读的图书，快去添加一本好书看看吧～"
+        emptyLabel.text = "Dear, you don’t have any books you are currently reading, go ahead and add a good book to have a look~"
         addSubview(emptyLabel)
         emptyLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self).offset(20)
@@ -175,7 +175,7 @@ class IRHomeCurrentReadingCell: UICollectionViewCell {
         layer.cornerRadius = 10
         
         titleLabel.textColor = .black
-        titleLabel.text = "当前阅读"
+        titleLabel.text = "Current reading"
         titleLabel.font = .boldSystemFont(ofSize: 20)
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in

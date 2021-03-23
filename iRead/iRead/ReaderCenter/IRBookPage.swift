@@ -28,7 +28,7 @@ class IRBookPage: NSObject {
     }
     
     func updateTextColor(_ textColor: UIColor) {
-
+        
         let mutableContent: NSMutableAttributedString = content.mutableCopy() as! NSMutableAttributedString
         let tempContent = mutableContent.mutableCopy() as! NSMutableAttributedString
         tempContent.enumerateAttributes(in: NSMakeRange(0, tempContent.length), options: [.longestEffectiveRangeNotRequired]) { (value: [NSAttributedString.Key : Any], range, stop) in

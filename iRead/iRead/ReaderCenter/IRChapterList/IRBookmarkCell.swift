@@ -31,7 +31,7 @@ class IRBookmarkCell: UITableViewCell {
         didSet {
             var title = bookmarkModel?.chapterName
             if title?.count == 0 {
-                title = "第\(bookmarkModel?.chapterIdx ?? 0)章"
+                title = "First\(bookmarkModel?.chapterIdx ?? 0)chapter"
             }
             titleLabel.text = title
             timeLabel.text = String.formateTimeIntervalToString1(timeInterval: bookmarkModel?.markTime ?? NSTimeIntervalSince1970)

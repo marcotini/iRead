@@ -10,7 +10,7 @@ import UIKit
 import IRCommonLib
 
 class IRBookmarkManager: NSObject {
-
+    
     static var tableListdMap = [String: Bool]()
     
     class func tableName(withBookName name: String) -> String {
@@ -18,7 +18,7 @@ class IRBookmarkManager: NSObject {
         tablePrefix = tablePrefix.replacingOccurrences(of: " ", with: "")
         return tablePrefix + "_bookmark_table"
     }
-
+    
     class func creatBookmarkTableIfNeeded(withName name: String) {
         var hasCreated = false
         if let value = tableListdMap[name] {
@@ -30,11 +30,11 @@ class IRBookmarkManager: NSObject {
         
         // //Mutil PRIMARY KEY: https://stackoverflow.com/questions/734689/sqlite-primary-key-on-multiple-columns
         let sql = "CREATE TABLE IF NOT EXISTS \(name)" + "(chapterIdx \(IRDBType.INTEGER.rawValue)," +
-                                                         "textLoction \(IRDBType.INTEGER.rawValue)," +
-                                                         "markTime \(IRDBType.INTEGER.rawValue)," +
-                                                         "chapterName \(IRDBType.TEXT.rawValue)," +
-                                                         "content \(IRDBType.TEXT.rawValue)," +
-                                                         "PRIMARY KEY(chapterIdx, textLoction))"
+            "textLoction \(IRDBType.INTEGER.rawValue)," +
+            "markTime \(IRDBType.INTEGER.rawValue)," +
+            "chapterName \(IRDBType.TEXT.rawValue)," +
+            "content \(IRDBType.TEXT.rawValue)," +
+            "PRIMARY KEY(chapterIdx, textLoction))"
         
         let success = IRDBManager.shared.executeUpdate(sql, values: nil)
         if success {
@@ -101,7 +101,7 @@ extension IRBookmarkManager {
                 let textLoction = resultSet.long(forColumn: "textLoction")
                 let chapterName = resultSet.string(forColumn: "chapterName")
                 let content = resultSet.string(forColumn: "content")
-     
+                
                 let bookmark = IRBookmarkModel.init(chapterIdx: chapterIdx, chapterName: chapterName, textLoction: textLoction)
                 bookmark.markTime = markTime
                 bookmark.content = content

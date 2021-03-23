@@ -108,7 +108,7 @@ class IRReadBottomBar: UIView {
         readSlider.minimumValue = onlyOnePage ? 0 : 1
         readSlider.maximumValue = onlyOnePage ? 1 : Float(bookPageCount)
         readSlider.setValue(Float(curentPageIdx), animated: false)
-        pageInfoLabel.text = "第\(curentPageIdx)页，共\(bookPageCount)页"
+        pageInfoLabel.text = "First\(curentPageIdx)pages of\(bookPageCount)page"
         progressView.progress = bookPageCount > 0 ? Float(curentPageIdx) / Float(bookPageCount) : 0
     }
     

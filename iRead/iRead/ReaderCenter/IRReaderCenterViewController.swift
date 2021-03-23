@@ -88,7 +88,7 @@ class IRReaderCenterViewController: IRBaseViewcontroller, UIGestureRecognizerDel
             IRReaderConfig.readingTime += Int((Date().timeIntervalSince1970 - readingBegin))
         }
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return shouldHideStatusBar
     }
@@ -140,7 +140,7 @@ class IRReaderCenterViewController: IRBaseViewcontroller, UIGestureRecognizerDel
                 DispatchQueue.main.async {
                     self.loadingView?.stopAnimating()
                     HUD.dimsBackground = false
-                    HUD.flash(.label("解析失败了，看看其他书吧～"), delay: 1) { _ in
+                    HUD.flash(.label("The analysis failed. Check out other books~"), delay: 1) { _ in
                         self.navigationController?.popViewController(animated: true)
                     }
                 }
@@ -274,7 +274,7 @@ class IRReaderCenterViewController: IRBaseViewcontroller, UIGestureRecognizerDel
         guard var pageIndex = readVc.pageModel?.pageIdx else { return pageModel }
         guard var chapterIndex = readVc.pageModel?.chapterIdx else { return pageModel }
         var currentChapter = book.chapter(at: chapterIndex)
-
+        
         if pageIndex > 0 {
             pageIndex -= 1;
             pageModel = currentChapter.page(at: pageIndex)
@@ -296,7 +296,7 @@ class IRReaderCenterViewController: IRBaseViewcontroller, UIGestureRecognizerDel
         guard var pageIndex = readVc.pageModel?.pageIdx else { return pageModel }
         guard var chapterIndex = readVc.pageModel?.chapterIdx else { return pageModel }
         var currentChapter = book.chapter(at: chapterIndex)
-
+        
         let pageCount = currentChapter.pageList.count
         if pageIndex + 1 < pageCount {
             pageIndex += 1;
@@ -316,7 +316,7 @@ class IRReaderCenterViewController: IRBaseViewcontroller, UIGestureRecognizerDel
         readingRecord = IRReadingRecordManager.readingRecord(with: book.bookName)
         let currentChapter = book.chapter(at: readingRecord.chapterIdx)
         var pageModel = currentChapter.page(at: readingRecord.pageIdx)
-
+        
         if pageModel?.range != nil {
             if !NSEqualRanges(pageModel!.range, readingRecord.textRange) {
                 for item in currentChapter.pageList {
@@ -406,7 +406,7 @@ extension IRReaderCenterViewController: IRChapterListViewControllerDelagate {
 
 //MARK: - IRBookParseDelegate
 extension IRReaderCenterViewController: IRBookParseDelegate {
-
+    
     func book(_ book: IRBook, didFinishLoadBookmarkList list: [IRBookmarkModel]) {
         if shouldHideStatusBar {
             return
@@ -446,7 +446,7 @@ extension IRReaderCenterViewController: IRBookParseDelegate {
                 }
             }
         }
-    
+        
         if readNavigationContentView != nil {
             readBottomBar.isParseFinish = true
             readBottomBar.curentPageIdx = currentReadingVC.pageModel?.displayPageIdx ?? 0
@@ -582,7 +582,7 @@ extension IRReaderCenterViewController: UIPageViewControllerDataSource, UIPageVi
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         if pageViewController.transitionStyle == .pageCurl &&
-           viewController.isKind(of: IRPageBackViewController.self) {
+            viewController.isKind(of: IRPageBackViewController.self) {
             return beforePageVC
         }
         
@@ -602,9 +602,9 @@ extension IRReaderCenterViewController: UIPageViewControllerDataSource, UIPageVi
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-
+        
         if pageViewController.transitionStyle == .pageCurl &&
-           viewController.isKind(of: IRReadPageViewController.self) {
+            viewController.isKind(of: IRReadPageViewController.self) {
             return IRPageBackViewController.pageBackViewController(WithPageView: viewController.view)
         }
         

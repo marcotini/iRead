@@ -32,7 +32,7 @@ class IRBookModel: NSObject {
     }
     
     class func model(with bookMeta: FRBook, path: String, imageMaxWidth: CGFloat?) -> IRBookModel {
-        let book = IRBookModel.init(with: bookMeta.title ?? "无书名", path: path)
+        let book = IRBookModel.init(with: bookMeta.title ?? "No title", path: path)
         if let coverUrl = bookMeta.coverImage?.fullHref {
             if let imageMaxWidth = imageMaxWidth {
                 book.coverImage = UIImage.init(contentsOfFile: coverUrl)?.scaled(toWidth:imageMaxWidth, scale: 2)
