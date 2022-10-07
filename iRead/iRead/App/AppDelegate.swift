@@ -141,7 +141,7 @@ extension AppDelegate {
         
         let flexBtn: UIButton = .init(type: UIButton.ButtonType.custom)
         flexBtn.titleLabel?.font = .systemFont(ofSize: 12);
-        flexBtn.setTitle("FLEX", for: UIControl.State.normal)
+        flexBtn.setTitle("", for: UIControl.State.normal)
         flexBtn.setTitleColor(.blue, for: UIControl.State.normal)
         flexBtn.addTarget(self, action:#selector(AppDelegate.showFlexDebugView), for: UIControl.Event.touchUpInside)
         flexBtn.frame = flexWindow.bounds
